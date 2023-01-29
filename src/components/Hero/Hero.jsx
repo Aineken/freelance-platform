@@ -1,12 +1,8 @@
 import React from "react";
-import MainSection from "./MainSection/MainSection";
+import { MainDiv } from "./HeroStyled";
 
 function Hero() {
-  return (
-    <>
-      <MainSection />
-    </>
-  );
+  return <MainDiv></MainDiv>;
 }
 
 export default Hero;
