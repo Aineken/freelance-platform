@@ -40,7 +40,7 @@ function Header() {
           <NavLink>
             <HeaderImg src={navbar} alt="" />
           </NavLink>
-          <Link to="/#platform">
+          <Link to="/" state={{ platform: "platform" }}>
             <NavLink>
               <HeaderImg logo src={logo} alt="" />
             </NavLink>
