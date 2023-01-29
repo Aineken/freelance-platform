@@ -21,6 +21,13 @@ export const HeroTop = styled.div`
     height: 10px;
   }
 
+  .activeClass {
+    color: ${(props) => props.theme.colors.hover};
+    img {
+      filter: invert(65%) sepia(56%) saturate(3397%) hue-rotate(152deg)
+        brightness(102%) contrast(104%);
+    }
+  }
   @media ${(props) => props.theme.breakpoints.lg} {
   }
 `;

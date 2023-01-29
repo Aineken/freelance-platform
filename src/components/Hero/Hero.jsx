@@ -20,12 +20,18 @@ function Hero({ platform }) {
   return (
     <MainDiv>
       <HeroTop>
-        <TopName onClick={() => setMain(true)}>
+        <TopName
+          className={main === true ? "activeClass" : null}
+          onClick={() => setMain(true)}
+        >
           Услуги
           <img src={curve} alt="Services" />
         </TopName>
 
-        <TopName onClick={() => setMain(false)}>
+        <TopName
+          className={main === false ? "activeClass" : null}
+          onClick={() => setMain(false)}
+        >
           О платформе
           <img src={curve} alt="Platforms" />
         </TopName>
