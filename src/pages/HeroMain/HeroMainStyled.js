@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardsContainer = styled.div`
+export const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;

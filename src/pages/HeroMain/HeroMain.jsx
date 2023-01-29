@@ -4,16 +4,16 @@ import { mainCardDatas } from "../../utils/constants";
 import {
   CardContainer,
   CardImg,
-  CardsContainer,
   CardTitle,
+  HeroContainer,
 } from "./HeroMainStyled";
 
 const HeroMain = () => {
   return (
-    <CardsContainer>
-      {mainCardDatas.map(({ id, title, image, link }) => {
+    <HeroContainer id="hero">
+      {mainCardDatas.map(({ id, title, image }) => {
         return (
-          <Link to={`/services/${link}`}>
+          <Link key={id} to={`/services/${id}`}>
             <CardContainer key={id}>
               <CardImg src={image} alt="Card Image" />
               <CardTitle>{title} </CardTitle>
@@ -21,7 +21,7 @@ const HeroMain = () => {
           </Link>
         );
       })}
-    </CardsContainer>
+    </HeroContainer>
   );
 };
 

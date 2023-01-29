@@ -75,6 +75,8 @@ export const NavLink = styled.div`
 `;
 
 export const BottomLink = styled.div`
+  color: #fff;
+
   margin-left: 3rem;
   display: flex;
   align-items: center;

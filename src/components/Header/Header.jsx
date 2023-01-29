@@ -21,6 +21,7 @@ import {
   NavLink,
 } from "./HeaderStyled";
 import Search from "../Search/Search";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -39,9 +40,11 @@ function Header() {
           <NavLink>
             <HeaderImg src={navbar} alt="" />
           </NavLink>
-          <NavLink>
-            <HeaderImg logo src={logo} alt="" />
-          </NavLink>
+          <Link to="/#platform">
+            <NavLink>
+              <HeaderImg logo src={logo} alt="" />
+            </NavLink>
+          </Link>
         </Div1>
         <Div2>
           <HeaderTitle>Платформа Фриланса</HeaderTitle>
@@ -50,18 +53,24 @@ function Header() {
           <Search />
           <HeaderBottom>
             <span>или</span>
-            <BottomLink>
-              <img src={headBut1} alt="" />
-              <span>создать заказ</span>
-            </BottomLink>
-            <BottomLink>
-              <img src={headBut2} alt="" />
-              <span>объявить конкурс</span>
-            </BottomLink>
-            <BottomLink>
-              <img src={headBut3} alt="" />
-              <span>найти заказ</span>
-            </BottomLink>
+            <Link to="/">
+              <BottomLink>
+                <img src={headBut1} alt="" />
+                <span>создать заказ</span>
+              </BottomLink>
+            </Link>
+            <Link to="/">
+              <BottomLink>
+                <img src={headBut2} alt="" />
+                <span>объявить конкурс</span>
+              </BottomLink>
+            </Link>
+            <Link to="/">
+              <BottomLink>
+                <img src={headBut3} alt="" />
+                <span>найти заказ</span>
+              </BottomLink>
+            </Link>
           </HeaderBottom>
         </Div2>
       </Container>
