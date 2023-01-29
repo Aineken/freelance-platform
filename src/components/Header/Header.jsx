@@ -29,7 +29,7 @@ function Header() {
       <Container>
         <Div1>
           <NavLink>
-            <HeaderImg src={ru} alt="" />
+            <HeaderImg className="active" src={ru} alt="" />
           </NavLink>
           <NavLink>
             <HeaderImg src={en} alt="" />

@@ -21,7 +21,7 @@ export const Div1 = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  gap: 25px;
+  gap: 20px;
 
   @media ${(props) => props.theme.breakpoints.md} {
   }
@@ -71,6 +71,10 @@ export const NavLink = styled.div`
   justify-content: center;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
+  }
+  .active {
+    filter: invert(65%) sepia(56%) saturate(3397%) hue-rotate(152deg)
+      brightness(102%) contrast(104%);
   }
 `;
 
