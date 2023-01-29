@@ -1,52 +1,71 @@
+import React from "react";
+import ru from "./SVGs/ru.svg";
+import en from "./SVGs/en.svg";
+import login from "./SVGs/login.svg";
+import navbar from "./SVGs/navbar.svg";
+import logo from "./SVGs/logo.svg";
+import headBut1 from "./SVGs/headBut1.svg";
+import headBut2 from "./SVGs/headBut2.svg";
+import headBut3 from "./SVGs/headBut3.svg";
+
 import {
+  BottomLink,
   Container,
   Div1,
   Div2,
-  Div3,
+  HeaderBottom,
+  HeaderContainer,
+  HeaderImg,
+  HeaderText,
+  HeaderTitle,
   NavLink,
-  SocialIcons,
 } from "./HeaderStyled";
-
-import { FaGithub, FaTelegram, FaLinkedin } from "react-icons/fa";
-
-import logo from "../../utils/andrzul_logo.svg";
+import Search from "../Search/Search";
 
 function Header() {
   return (
-    <Container>
-      <Div1>
-        <NavLink left main white href="#">
-          <img
-            src={logo}
-            alt="Logo"
-            style={{ marginRight: "1rem", maxWidth: "100px", width: "100%" }}
-          />
-
-          <span>Portfolio</span>
-        </NavLink>
-      </Div1>
-      <Div2>
-        <NavLink href="#project">Project</NavLink>
-
-        <NavLink href="#tech">Technologies</NavLink>
-
-        <NavLink href="#about">About</NavLink>
-      </Div2>
-      <Div3>
-        <SocialIcons href="https://github.com/Aineken" target="_blank">
-          <FaGithub size="3rem" />
-        </SocialIcons>
-        <SocialIcons
-          href="https://www.linkedin.com/in/andrzul/"
-          target="_blank"
-        >
-          <FaLinkedin size="3rem" />
-        </SocialIcons>
-        <SocialIcons href="https://t.me/andrzul" target="_blank">
-          <FaTelegram size="3rem" />
-        </SocialIcons>
-      </Div3>
-    </Container>
+    <HeaderContainer>
+      <Container>
+        <Div1>
+          <NavLink>
+            <HeaderImg src={ru} alt="" />
+          </NavLink>
+          <NavLink>
+            <HeaderImg src={en} alt="" />
+          </NavLink>
+          <NavLink>
+            <HeaderImg src={login} alt="" />
+          </NavLink>
+          <NavLink>
+            <HeaderImg src={navbar} alt="" />
+          </NavLink>
+          <NavLink>
+            <HeaderImg logo src={logo} alt="" />
+          </NavLink>
+        </Div1>
+        <Div2>
+          <HeaderTitle>Платформа Фриланса</HeaderTitle>
+          <HeaderText>созданная фрилансерами за свой счет</HeaderText>
+          {/* Search */}
+          <Search />
+          <HeaderBottom>
+            <span>или</span>
+            <BottomLink>
+              <img src={headBut1} alt="" />
+              <span>создать заказ</span>
+            </BottomLink>
+            <BottomLink>
+              <img src={headBut2} alt="" />
+              <span>объявить конкурс</span>
+            </BottomLink>
+            <BottomLink>
+              <img src={headBut3} alt="" />
+              <span>найти заказ</span>
+            </BottomLink>
+          </HeaderBottom>
+        </Div2>
+      </Container>
+    </HeaderContainer>
   );
 }
 

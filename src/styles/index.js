@@ -1,5 +1,5 @@
-import {createGlobalStyle} from "styled-components";
-import {normalize} from "styled-normalize";
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
@@ -7,6 +7,9 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  *:focus {
+    outline: none;
   }
 
   html {
@@ -36,5 +39,3 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default GlobalStyles;
-
-

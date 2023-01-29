@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const HeaderContainer = styled.header`
   display: flex;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    display: grid;
-    grid-template-columns: 200px repeat(4, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: 160px repeat(4, 1fr);
-  }
+  background-color: #1f57c3;
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 25px 50px;
 `;
 
 export const Div1 = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 25px;
 
-  flex-direction: row;
-  align-items: center;
-  margin-right: 2rem;
   @media ${(props) => props.theme.breakpoints.md} {
   }
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -33,96 +30,78 @@ export const Div1 = styled.div`
 `;
 
 export const Div2 = styled.div`
+  margin-top: 30px;
   display: flex;
-
-  justify-content: space-around;
-  align-items: center;
+  width: 800px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
   @media ${(props) => props.theme.breakpoints.lg} {
   }
   @media ${(props) => props.theme.breakpoints.md} {
   }
 `;
-export const Div3 = styled.div`
+export const HeaderTitle = styled.h1`
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 42px;
+  margin: 0.5rem;
+`;
+export const HeaderText = styled.p`
+  color: #00ccff;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+`;
+export const HeaderBottom = styled.div`
   display: flex;
-  justify-content: space-around;
+  padding: 15px 25px;
+  width: max-content;
+  margin: auto;
+  justify-content: space-between;
   align-items: center;
-  @media ${(props) => props.theme.breakpoints.md} {
-    justify-content: space-between;
-    align-items: center;
+  font-size: 18px;
+  color: #fff;
+`;
+
+export const NavLink = styled.div`
+  display: grid;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  @media ${(props) => props.theme.breakpoints.sm} {
   }
 `;
 
-// Social Icons
-
-// Navigation Links
-export const NavLink = styled.div`
-  font-size: 2.5rem;
-  font-weight: ${(props) => (props.main ? "700" : null)};
-  line-height: 32px;
+export const BottomLink = styled.div`
+  margin-left: 3rem;
   display: flex;
-  width: 100%;
-  padding: 1rem;
-  justify-content: center;
   align-items: center;
-  color: ${(props) => props.theme.colors.primary};
-  transition: 0.5s ease;
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
-  }
-
   img {
-    width: 200px;
-    height: 100px;
-    object-fit: cover;
+    margin-right: 8px;
+    height: 30px;
   }
   span {
-    margin-left: 1rem;
-    font-size: 2.5rem;
-    font-weight: 500;
-  }
-  * {
-    font-size: 20px;
+    transition: 0.3s ease;
+    :hover {
+      color: ${(props) => props.theme.colors.hover};
+    }
   }
 `;
 
-export const CategoryButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(136.1deg, #ff4e50 24.18%, #1a116f 173.45%);
-  border-radius: 10px;
-  border: 0;
-  height: 60px;
-  width: 210px;
-  position: relative;
-  transition: all 0.3s;
-  cursor: pointer;
-  color: #fff;
-  margin-right: 2rem;
-  font-size: 2rem;
-`;
+export const HeaderImg = styled.img`
+  color: aqua;
+  filter: invert(93%) sepia(94%) saturate(0%) hue-rotate(115deg)
+    brightness(106%) contrast(105%);
 
-export const RegisterButton = styled.button`
-  font-weight: 600;
-  margin-left: 2rem;
-  font-size: 2.5rem;
-  color: #f53855;
-  height: 60px;
-  padding: 2rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #f53855;
-  box-sizing: border-box;
-  border-radius: 50px;
-  transition: all 0.3s;
-  background-color: transparent;
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transition: 0.1s ease;
+  width: 100%;
+  :hover {
+    filter: invert(65%) sepia(56%) saturate(3397%) hue-rotate(152deg)
+      brightness(102%) contrast(104%);
+  }
+  height: ${(props) => (props.logo ? "40px" : "20px")};
+  @media ${(props) => props.theme.breakpoints.sm} {
   }
 `;

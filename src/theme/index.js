@@ -2,13 +2,14 @@ export default {
   // Temp fonts
   fonts: {
     title: "Source Sans Pro, sans-serif",
+    main: "Source Sans Pro, sans-serif",
   },
   // Colors for layout
   colors: {
-    primary: "#0f141a",
+    primary: "#000",
     button: "#1d9bf0",
-    buttonText:"#fff",
-    hover:"#8fcdf7",
+    buttonText: "#fff",
+    hover: "#00ccff",
     background: "#fff",
   },
   // Breakpoints for responsive design
