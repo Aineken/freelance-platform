@@ -47,25 +47,28 @@ function Header() {
           </Link>
         </Div1>
         <Div2>
-          <HeaderTitle>Платформа Фриланса</HeaderTitle>
-          <HeaderText>созданная фрилансерами за свой счет</HeaderText>
+          <Link to="/">
+            <HeaderTitle>Платформа Фриланса</HeaderTitle>
+            <HeaderText>созданная фрилансерами за свой счет</HeaderText>
+          </Link>
+
           {/* Search */}
           <Search />
           <HeaderBottom>
             <span>или</span>
-            <Link to="/">
+            <Link to="/create">
               <BottomLink>
                 <img src={headBut1} alt="" />
                 <span>создать заказ</span>
               </BottomLink>
             </Link>
-            <Link to="/">
+            <Link to="/application">
               <BottomLink>
                 <img src={headBut2} alt="" />
                 <span>объявить конкурс</span>
               </BottomLink>
             </Link>
-            <Link to="/">
+            <Link to="/orders">
               <BottomLink>
                 <img src={headBut3} alt="" />
                 <span>найти заказ</span>

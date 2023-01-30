@@ -3,19 +3,22 @@ import { HeroTop, MainDiv, TopName } from "./HeroStyled";
 import curve from "../Header/SVGs/curve.svg";
 import HeroMain from "../../pages/HeroMain/HeroMain";
 import AboutPlatform from "../../pages/AboutPlatform/AboutPlatform";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-function Hero({ platform }) {
-  console.log(platform);
+function Hero() {
   const [main, setMain] = useState(true);
 
-  const data = useLocation();
+  let test = useLocation();
 
   useEffect(() => {
-    if (data.state.platform === "platform") {
-      setMain(false);
+    if (test.state === null) {
+      return console.log("haha");
     }
-  }, [data]);
+
+    if (test.state.platform === "platform") {
+      return setMain(false);
+    }
+  }, [test]);
 
   return (
     <MainDiv>
