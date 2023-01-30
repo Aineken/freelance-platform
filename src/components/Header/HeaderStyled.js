@@ -4,13 +4,13 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   width: 100%;
-
   background-color: #1f57c3;
 `;
 
 export const Container = styled.div`
   width: 100%;
   max-width: 1400px;
+  gap: 5rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -18,14 +18,17 @@ export const Container = styled.div`
 `;
 
 export const Div1 = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: flex-end;
   gap: 20px;
 
   @media ${(props) => props.theme.breakpoints.md} {
   }
   @media ${(props) => props.theme.breakpoints.sm} {
+    justify-content: center;
   }
 `;
 
@@ -33,10 +36,12 @@ export const Div2 = styled.div`
   margin-top: 30px;
   display: flex;
   width: 800px;
+  gap: 1rem;
   justify-content: center;
   flex-direction: column;
   margin: auto;
   @media ${(props) => props.theme.breakpoints.lg} {
+    width: 100%;
   }
   @media ${(props) => props.theme.breakpoints.md} {
   }
@@ -63,6 +68,13 @@ export const HeaderBottom = styled.div`
   align-items: center;
   font-size: 18px;
   color: #fff;
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 10px 15px;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 `;
 
 export const NavLink = styled.div`
@@ -93,6 +105,9 @@ export const BottomLink = styled.div`
     :hover {
       color: ${(props) => props.theme.colors.hover};
     }
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin: 0;
   }
 `;
 

@@ -6,17 +6,17 @@ import AboutPlatform from "../../pages/AboutPlatform/AboutPlatform";
 import { useLocation } from "react-router-dom";
 
 function Hero() {
-  const [main, setMain] = useState(true);
+  const [main, setMain] = useState("hero");
 
   let test = useLocation();
 
   useEffect(() => {
     if (test.state === null) {
-      return console.log("haha");
+      return () => (test.state = null);
     }
 
-    if (test.state.platform === "platform") {
-      return setMain(false);
+    if (test.state.platform) {
+      setMain("platform");
     }
   }, [test]);
 
@@ -24,22 +24,23 @@ function Hero() {
     <MainDiv>
       <HeroTop>
         <TopName
-          className={main === true ? "activeClass" : null}
-          onClick={() => setMain(true)}
+          className={main === "hero" && "activeClass"}
+          onClick={() => setMain("hero")}
         >
           Услуги
           <img src={curve} alt="Services" />
         </TopName>
 
         <TopName
-          className={main === false ? "activeClass" : null}
-          onClick={() => setMain(false)}
+          className={main === "platform" && "activeClass"}
+          onClick={() => setMain("platform")}
         >
           О платформе
           <img src={curve} alt="Platforms" />
         </TopName>
       </HeroTop>
-      {main ? <HeroMain /> : <AboutPlatform />}
+      {main === "hero" && <HeroMain />}
+      {main === "platform" && <AboutPlatform />}
     </MainDiv>
   );
 }

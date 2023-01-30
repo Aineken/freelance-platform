@@ -8,6 +8,14 @@ export const HeroContainer = styled.div`
   margin: auto;
   place-items: center;
   margin: 50px auto;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `;
 
 export const CardContainer = styled.div`

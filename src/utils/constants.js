@@ -17,3 +17,23 @@ export const mainCardDatas = [
   { id: 8, title: "Реклама", image: "/images/rekl.svg" },
   { id: 9, title: "Все услуги", image: "/images/services.svg" },
 ];
+
+const menuLists = [
+  "ГЛАВНАЯ",
+  "ВСЕ УСЛУГ",
+  "ЗАКАЗЫ",
+  "СОЗДАТЬ ЗАКАЗ",
+  "КОНКУРС",
+  "ОБЪЯВИТЬ КОНКУРС",
+  "ФРИЛАНСЕРЫ",
+  "О ПЛАТФОРМЕ",
+  "РЕФЕРАЛЬНАЯ ПРОГРАММА",
+  "ЛИЧНЫЙ КАБИНЕТ",
+  "ПОМОЩЬ",
+  "ПОИСК",
+];
+
+export const newData = menuLists.map((list, index) => ({
+  id: index + 1,
+  name: list,
+}));

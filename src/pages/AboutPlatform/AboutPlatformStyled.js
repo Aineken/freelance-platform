@@ -17,15 +17,18 @@ export const AboutMain = styled.h2`
   color: #213479;
 `;
 export const AboutTitle = styled.h4`
-  margin: 4rem;
+  margin: 4rem auto;
   font-weight: 600;
   font-size: 30px;
   width: 100%;
   text-align: center;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin: 2rem auto;
+  }
 `;
 
 export const AboutText = styled.p`
-  margin: 2rem;
+  margin: 2rem auto;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
@@ -34,5 +37,8 @@ export const AboutText = styled.p`
   span {
     height: 30px;
     margin-right: 1rem;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin: 1rem auto;
   }
 `;

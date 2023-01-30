@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ru from "./SVGs/ru.svg";
 import en from "./SVGs/en.svg";
 import login from "./SVGs/login.svg";
@@ -22,25 +22,46 @@ import {
 } from "./HeaderStyled";
 import Search from "../Search/Search";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
 
 function Header() {
+  const [lang, setLang] = useState("ru");
+  const [navbarActive, setNavbarActive] = useState(false);
   return (
     <HeaderContainer>
       <Container>
         <Div1>
           <NavLink>
-            <HeaderImg className="active" src={ru} alt="" />
+            <HeaderImg
+              className={lang === "ru" && "active"}
+              onClick={() => setLang("ru")}
+              src={ru}
+              alt=""
+            />
           </NavLink>
           <NavLink>
-            <HeaderImg src={en} alt="" />
+            <HeaderImg
+              className={lang === "en" && "active"}
+              onClick={() => setLang("en")}
+              src={en}
+              alt=""
+            />
           </NavLink>
+          <Link to="/login">
+            <NavLink>
+              <HeaderImg src={login} alt="" />
+            </NavLink>
+          </Link>
           <NavLink>
-            <HeaderImg src={login} alt="" />
+            <HeaderImg
+              onClick={() => setNavbarActive((prev) => !prev)}
+              className={navbarActive && "active"}
+              src={navbar}
+              alt=""
+            />
+            {navbarActive && <Navbar setNavbarActive={setNavbarActive} />}
           </NavLink>
-          <NavLink>
-            <HeaderImg src={navbar} alt="" />
-          </NavLink>
-          <Link to="/" state={{ platform: "platform" }}>
+          <Link to="/" state={{ platform: true }}>
             <NavLink>
               <HeaderImg logo src={logo} alt="" />
             </NavLink>
