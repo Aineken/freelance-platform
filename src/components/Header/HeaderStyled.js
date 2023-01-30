@@ -24,6 +24,8 @@ export const Div1 = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
+  height: max-content;
+  min-height: 50px;
 
   @media ${(props) => props.theme.breakpoints.md} {
   }
