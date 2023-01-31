@@ -87,6 +87,7 @@ export const NavLink = styled.div`
   width: max-content;
   justify-content: center;
   align-items: center;
+  height: 100%;
   @media ${(props) => props.theme.breakpoints.sm} {
   }
   .active {
@@ -120,14 +121,13 @@ export const HeaderImg = styled.img`
   color: aqua;
   filter: invert(93%) sepia(94%) saturate(0%) hue-rotate(115deg)
     brightness(106%) contrast(105%);
-
   transition: 0.1s ease;
-  width: 100%;
   :hover {
     filter: invert(65%) sepia(56%) saturate(3397%) hue-rotate(152deg)
       brightness(102%) contrast(104%);
   }
   height: ${(props) => (props.logo ? "40px" : "20px")};
+
   @media ${(props) => props.theme.breakpoints.sm} {
   }
 `;

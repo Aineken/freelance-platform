@@ -47,11 +47,11 @@ function Header() {
               alt=""
             />
           </NavLink>
-          {/* <Link to="/login"> */}
-          <NavLink>
-            <HeaderImg src={login} alt="" />
-          </NavLink>
-          {/* </Link> */}
+          <Link to="/login">
+            <NavLink>
+              <HeaderImg src={login} alt="" />
+            </NavLink>
+          </Link>
           <NavLink>
             <HeaderImg
               onClick={() => setNavbarActive((prev) => !prev)}
@@ -61,11 +61,11 @@ function Header() {
             />
             {navbarActive && <Navbar setNavbarActive={setNavbarActive} />}
           </NavLink>
-          {/* <Link to="/" state={{ platform: true }}> */}
-          <NavLink>
-            <HeaderImg logo src={logo} alt="" />
-          </NavLink>
-          {/* </Link> */}
+          <Link to="/" state={{ platform: true }}>
+            <NavLink>
+              <HeaderImg logo src={logo} alt="" />
+            </NavLink>
+          </Link>
         </Div1>
         <Div2>
           <Link to="/">
