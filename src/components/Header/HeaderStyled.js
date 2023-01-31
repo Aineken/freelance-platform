@@ -15,6 +15,9 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 25px 50px;
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 2rem;
+  }
 `;
 
 export const Div1 = styled.div`
@@ -28,9 +31,9 @@ export const Div1 = styled.div`
   min-height: 50px;
 
   @media ${(props) => props.theme.breakpoints.md} {
+    justify-content: center;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    justify-content: center;
   }
 `;
 
